@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import LocationResult from "./component/Location"
+import Duration from './component/Form/Duration'
+import Season from './component/Form/Season'
+import NoMatch from './component/NoMatch/NoMatch'
+
 
 class App extends Component {
   render() {
     return (
+
       <LocationResult />
+
+      <div>
+        <Duration />
+        <Season />
+        <NoMatch />
+      </div>
+
     );
   }
 }
