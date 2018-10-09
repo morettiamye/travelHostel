@@ -1,24 +1,24 @@
 import React from "react";
 import Button from "../component/Button";
-import Trip from "../component/Trip";
+// import Trip from "../component/Trip";
 
-class Dashboard extends Component {
+class Dashboard extends React.Component {
   state = {
-      favTrips: []
+    favTrips: []
   };
 
   componentDidMount = () => {
-    //API.getfavTrips ... 
+    //API.getfavTrips ...
     // setState({ req.body })
-  }
+  };
 
   render() {
     return (
       <div className="buttonDiv">
-        <Button name={addTrip} />
+        {/* <Button name={addTrip} />
         <Button name={favTrip} />
-        <Button name={myTrip} />
-        <div className="favTripDiv" {this.state.favTrip}/>
+        <Button name={myTrip} /> */}
+        {/* <div className="favTripDiv" {this.state.favTrip}/> */}
       </div>
     );
   }
