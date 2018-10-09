@@ -6,7 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Configure body parser for AJAX requests
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(
+  bodyParser.urlencoded({
+    limit: "5000mb",
+    extended: true
+  })
+);
 app.use(bodyParser.json());
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
@@ -18,9 +23,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 //change to match your db name!
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/travelHostel"
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelHostel");
 
 // Start the API server
 app.listen(PORT, () =>

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 //import Bulletin from "./pages/Bulletin";
 import Dashboard from "./pages/Dashboard";
 import Trip from "./pages/Trip";
+import MainForm from "./component/Form/Main";
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" component={Home} />
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/trip" component={Trip} />
+          <Route exact path="/trip" component={MainForm} />
           <Footer />
         </div>
       </Router>
