@@ -1,24 +1,38 @@
-
 import React, { Component } from "react";
-import NavBar from "../src/component/NavBar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
-import Duration from './component/Form/Duration'
-import Season from './component/Form/Season'
-import NoMatch from './component/NoMatch/NoMatch'
-import SearchCity from "./component/SearchCity"
-
+import Home from "./pages/Home";
+import Bulletin from "./pages/Bulletin";
+import Profile from "./pages/Profile";
+import Trip from "./pages/Trip";
 
 class App extends Component {
   render() {
     return (
-
-      <div className="App">
-
-
-      </div>
-
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/trip" component={Trip} />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
 
 export default App;
+
+// import NavBar from "./component/NavBar";
+// import Footer from "./component/Footer";
+// import Duration from "./component/Form/Duration";
+// import Season from "./component/Form/Season";
+// import NoMatch from "./component/NoMatch/NoMatch";
+// import SearchCity from "./component/SearchCity";
+// import Favorite from "./component/Favorite";
+// import Form from "./component/Form";
+// import FormNote from "./component/FormNote";
+// import PictureUploader from "./component/PictureUploader";
+// import Trip from "./component/Trip";
