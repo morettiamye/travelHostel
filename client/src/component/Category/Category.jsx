@@ -8,7 +8,7 @@ const Category = () => {
                     <select name="Category">
                         <option value="Food">Food</option>
                         <option value="Accomodations">Accomodations</option>
-                        <option value="Travel">Travel</option>
+                        <option value="Travel">Transportation</option>
                         <option value="Activities">Activities</option>
                     </select>
                 </div>
