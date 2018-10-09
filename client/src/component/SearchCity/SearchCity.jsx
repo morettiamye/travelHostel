@@ -1,6 +1,6 @@
 import React from "react";
 
-const Location = props => (
+const Search = props => (
 
     <div className="box">
         <div className="field is-grouped">
@@ -18,4 +18,4 @@ const Location = props => (
     </div>
 )
 
-export default Location;
+export default Search;

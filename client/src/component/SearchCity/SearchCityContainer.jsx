@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Location from "./Location"
+import Search from "./SearchCity"
 
-class LocationResult extends Component {
+class SearchCity extends Component {
     // Setting the initial state of the Counter component
     state = {
         city: ""
@@ -18,9 +18,9 @@ class LocationResult extends Component {
     render() {
         return (
             <div>
-                <Location handleInputChange={this.handleInputChange} />
+                <Search handleInputChange={this.handleInputChange} />
             </div>
         )
     }
 }
-export default LocationResult; 
+export default SearchCity; 
