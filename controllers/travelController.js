@@ -4,9 +4,34 @@ const db = require("../models");
 
 module.exports = {
   findAll: (req, res) => {
-    db.Example.find(req.query)
+    db.Trip.find(req.query)
       .sort({ date: -1 })
-      .then(dbExample => res.json(dbExample))
+      .then(dbTrip => res.json(dbTrip))
+      .catch(err => res.status(422).json(err));
+  },
+  findById: (req, res) => {
+    db.Trip
+      .findById(req.params.id)
+      .then(dbTrip => res.json(dbTrip))
+      .catch(err => res.status(422).json(err));
+  },
+  create: (req, res) => {
+    db.Trip
+      .create(req.body)
+      .then(dbTrip => res.json(dbTrip))
+      .catch(err => res.status(422).json(err));
+  },
+  update: (req, res) => {
+    db.Trip
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbTrip => res.json(dbTrip))
+      .catch(err => res.status(422).json(err));
+  },
+  remove: (req, res) => {
+    db.Trip
+      .findById({ _id: req.params.id })
+      .then(dbTrip => dbTrip.remove())
+      .then(dbTrip => res.json(dbTrip))
       .catch(err => res.status(422).json(err));
   }
 };
