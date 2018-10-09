@@ -1,4 +1,11 @@
 import React from "react";
+import Login from "../Login";
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+
+import * as routes from '../constants/routes';
 
 const NavBar = () => (
   <nav class="navbar is-white" role="navigation" aria-label="main navigation">
@@ -17,17 +24,31 @@ const NavBar = () => (
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-link is-medium" href="/">
-              Log in
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Login />
+    <Route
+        exact path={routes.LANDING}
+        component={LandingPage}
+      />
+      <Route
+        exact path={routes.SIGN_UP}
+        component={SignUpPage}
+      />
+      <Route
+        exact path={routes.SIGN_IN}
+        component={SignInPage}
+      />
+      <Route
+        exact path={routes.PASSWORD_FORGET}
+        component={PasswordForgetPage}
+      />
+      <Route
+        exact path={routes.HOME}
+        component={HomePage}
+      />
+      <Route
+        exact path={routes.ACCOUNT}
+        component={AccountPage}
+      />
   </nav>
 );
 
