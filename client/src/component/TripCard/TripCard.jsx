@@ -14,7 +14,7 @@ const TripCard = props => (
       <p className="subtitle is-6">
         @johnsmith
         <br />
-        <a href="/">See My Trip Details!</a>
+        <a href="/usertrips">See My Trip Details!</a>
       </p>
     </div>
   </div>
