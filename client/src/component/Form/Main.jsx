@@ -16,25 +16,27 @@ export default class Main extends React.Component {
     accomodations: "",
     transportations: "",
     activities: "",
-    photo: ""
+    photos: []
   };
 
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  getPhoto = photo => {
-    this.setState({ photo });
+  getPhotos = photos => {
+    console.log("This is getting done")
+    this.setState({ photos });
   };
 
   handleSubmitForm = e => {
+
     e.preventDefault();
     axios.post("/api/trips", this.state);
   };
 
   render() {
     return (
-      <form>
+      <div>
         <p>User:</p>
         <input
           type="text"
@@ -94,10 +96,10 @@ export default class Main extends React.Component {
           onChange={this.handleInputChange}
         />
         <p>Photo(s):</p>
-        <PictureUploader getPhoto={this.getPhoto} />
+        <PictureUploader getPhotos={this.getPhotos} />
 
         <button onClick={this.handleSubmitForm}>Submit</button>
-      </form>
+      </div>
     );
   }
 }

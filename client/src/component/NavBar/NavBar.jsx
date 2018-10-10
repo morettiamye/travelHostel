@@ -1,12 +1,12 @@
 import React from "react";
 
 const NavBar = () => (
-  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <h1 class="has-text-black is-uppercase is-size-1">Virtual Hostel</h1>
+  <nav className="navbar is-white" role="navigation" aria-label="main navigation">
+    <div className="navbar-brand">
+      <h1 className="has-text-black is-uppercase is-size-1">Virtual Hostel</h1>
       <a
         role="button"
-        class="navbar-burger burger"
+        className="navbar-burger burger"
         aria-label="menu"
         aria-expanded="false"
         data-target="navbarBasicExample"
@@ -17,11 +17,11 @@ const NavBar = () => (
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-link is-medium" href="/">
+    <div id="navbarBasicExample" className="navbar-menu">
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <div className="buttons">
+            <a className="button is-link is-medium" href="/">
               Log in
             </a>
           </div>
