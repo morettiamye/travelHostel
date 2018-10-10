@@ -5,10 +5,12 @@ const userController = require("../../controllers/userController");
 router.route("/signup")
   .post(userController.signup);
 
-  router.route("/login")
+router.route("/login")
   .post(userController.login);
 
-  router.route("/logout")
+router.route("/logout")
   .get(userController.logout);
 
+router.route("/checklogin")
+  .get(userController.checklogin)
 module.exports = router;
