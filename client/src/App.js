@@ -8,6 +8,8 @@ import Dashboard from "./pages/Dashboard";
 import Trip from "./pages/Trip";
 import MainForm from "./component/Form/Main";
 
+import TripCard from "./component/TripCard";
+
 class App extends Component {
   render() {
     return (
@@ -17,6 +19,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/trip" component={MainForm} />
+          <TripCard />
+
           <Footer />
         </div>
       </Router>
