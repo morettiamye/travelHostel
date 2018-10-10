@@ -11,7 +11,7 @@ const Search = props => (
                 </form>
 
                 <p className="control">
-                    <a onClick={this.props.handleCitySearch} className="button is-link">Search</a>
+                    <a onClick={props.handleCitySearch} className="button is-link">Search</a>
                 </p>
             </p>
         </div>
