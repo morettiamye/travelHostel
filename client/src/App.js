@@ -5,9 +5,9 @@ import Footer from "./component/Footer";
 import Home from "./pages/Home";
 //import Bulletin from "./pages/Bulletin";
 import Dashboard from "./pages/Dashboard";
-import Trip from "./pages/Trip";
+import UserTrips from "./pages/UserTrips";
 import MainForm from "./component/Form/Main";
-
+import Modal from "./component/Modal";
 import TripCard from "./component/TripCard";
 
 class App extends Component {
@@ -19,8 +19,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/trip" component={MainForm} />
-          <TripCard />
-
+          <Route exact path="/usertrips" component={TripCard} />
           <Footer />
         </div>
       </Router>
