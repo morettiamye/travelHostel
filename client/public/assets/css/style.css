@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: no-repeat no-repeat;
+    background-size: cover;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .site-content {
+    flex: 1;
+  }
