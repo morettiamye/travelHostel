@@ -7,6 +7,8 @@ import Bulletin from "./pages/Bulletin";
 import Dashboard from "./pages/Dashboard";
 import MainForm from "./component/Form/Main";
 
+import TripCard from "./component/TripCard";
+
 class App extends Component {
   render() {
     return (
