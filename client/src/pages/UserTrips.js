@@ -9,9 +9,6 @@ import API from "../utils/API";
 class UserTrips extends Component {
   state = {};
 
-  //   componentDidMount() {
-  //     this.loadAllTrips();
-  //   }
   render() {
     return (
       <div>

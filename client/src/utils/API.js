@@ -9,6 +9,11 @@ export default {
     getTrip: function (id) {
         return axios.get("/api/trips/" + id);
     },
+
+    getTripCity: function (city) {
+        return axios.get("api/trips/" + city);
+    },
+
     // Deletes the trip with the given id
     deleteTrip: function (id) {
         return axios.delete("/api/trips/" + id);
