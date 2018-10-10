@@ -2,50 +2,57 @@ import React from "react";
 
 class PictureUploader extends React.Component {
   state = {
-    src: ""
-  };
+    srcs: []
+  }
 
-  previewFile = () => {
-    let file = document.querySelector("input[type='file'").files[0];
-    let reader = new FileReader();
+  previewFiles = () => {
 
-    if (file) {
-      reader.readAsDataURL(file);
+    let files = document.querySelector('input[type=file]').files;
+
+    if (files) {
+      Promise.all([].map.call(files, this.readAndPreview))
+        .then(srcs => {
+          this.props.getPhotos(srcs)
+          this.setState({ srcs })
+        })
     }
+  }
 
-    reader.addEventListener(
-      "load",
-      () => {
-        this.setState({ src: reader.result });
+  readAndPreview = file => {
 
-        this.props.getPhoto(reader.result);
-      },
-      false
-    );
-  };
+    return new Promise((resolve, reject) => {
+      // Make sure `file.name` matches our extensions criteria
+      if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+        let reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+          resolve(this.result)
+        }, false);
+
+        reader.readAsDataURL(file);
+      }
+      else {
+        reject()
+      }
+    })
+  }
+
+  renderPicPreviews = () => {
+    return this.state.srcs.map((src, idx) => {
+      return <img src={src} alt='Trip Picture' style={{ maxHeight: 200, maxWidth: 200 }} key={idx} />
+    })
+  }
 
   render() {
     return (
-      <div>
-        <h1>Upload a photo of your trip!</h1>
+      <div className='picuploader-container'>
+        <h6>Upload pictures of your trip here!</h6>
         <form>
-          <input
-            style={{ display: "block" }}
-            type="file"
-            accept="image/*"
-            onChange={this.previewFile}
-          />
-          <img
-            src={
-              this.state.src.length <= 0
-                ? "https://static.umotive.com/img/product_image_thumbnail_placeholder.png"
-                : this.state.src
-            }
-            alt={this.state.src.length <= 0 ? "Placeholder" : "Your image"}
-          />
+          <input type='file' accept='image/*' multiple onChange={this.previewFiles} />
         </form>
+        {this.renderPicPreviews()}
       </div>
-    );
+    )
   }
 }
 

@@ -10,7 +10,7 @@ const travelSchema = new Schema({
   accomodations: { type: String },
   transportations: { type: String },
   activities: { type: String },
-  photo: { type: String },
+  photos: [{ type: String }],
   date: { type: Date, default: Date.now }
 });
 
