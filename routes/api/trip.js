@@ -13,4 +13,8 @@ router
   .put(travelController.update)
   .delete(travelController.remove);
 
+router
+  .route("/trips/:city")
+  .get(travelController.findByCity)
+
 module.exports = router;
