@@ -1,9 +1,9 @@
 import React from 'react';
-import Trip from "../component/Trip"
+import TripCard from "../component/TripCard"
 
 const Bulletin = () => {
     return (
-        <Trip />
+        <TripCard />
     );
 }
 
