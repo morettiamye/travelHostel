@@ -15,6 +15,12 @@ module.exports = {
       .then(dbTrip => res.json(dbTrip))
       .catch(err => res.status(422).json(err));
   },
+  findByCity: (req, res) => {
+    db.Trip
+      .findById(req.params.city)
+      .then(dbTrip => res.json(dbTrip))
+      .catch(err => res.status(422).json(err));
+  },
   create: (req, res) => {
     db.Trip
       .create(req.body)

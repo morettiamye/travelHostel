@@ -1,1 +1,1 @@
-export * from "./Trip";
+export { default } from "./Trip";

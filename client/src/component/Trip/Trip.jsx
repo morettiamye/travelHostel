@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Trip extends Component {
+class Trip extends React.Component {
     state = {
 
     }
