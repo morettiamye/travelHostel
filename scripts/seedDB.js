@@ -131,11 +131,13 @@ const tripSeed = [
 
 // Sometimes the below code has .remove({}) after db.trip; I think this clears out the database everytime there is a connection. I am not including it for now because I don't want data to be erased
 db.Trip
+    .remove({})
     .then(() => db.Trip.collection.insertMany(tripSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
-    }).catch(err => {
+    })
+    .catch(err => {
         console.error(err);
         process.exit(1);
     })

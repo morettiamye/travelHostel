@@ -5,14 +5,23 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Configure body parser for AJAX requests
-// app.use(bodyParser.json());
-// app.use(
-//   bodyParser.urlencoded({
-//     limit: "5000mb",
-//     extended: true
-//   })
-// );
+// Auth======================================
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+app.use(require('express-session')({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+var User = require('./models/user');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+// Auth======================================
+
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
