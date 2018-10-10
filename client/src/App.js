@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import Home from "./pages/Home";
-//import Bulletin from "./pages/Bulletin";
+import Bulletin from "./pages/Bulletin";
 import Dashboard from "./pages/Dashboard";
-import Trip from "./pages/Trip";
 import MainForm from "./component/Form/Main";
 
 class App extends Component {
@@ -17,6 +16,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/trip" component={MainForm} />
+          <Route exact path="/trips/:city" component={Bulletin} />
           <Footer />
         </div>
       </Router>
