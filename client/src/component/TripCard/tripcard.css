@@ -1,16 +1,18 @@
 .card {
-  height: 300px;
+  height: 305px;
   width: 300px;
   margin-left: 50px;
   margin-top: 50px;
-  border-left: double 7px black;
+  padding: 5px;
+  border: black solid 2px;
+  /* border-left: double 7px black;
   border-right: double 7px black;
   border-top: double 7px black;
-  border-bottom: solid 4px black;
+  border-bottom: solid 4px black; */
 }
 
 img {
-  border-bottom: solid 3px black;
+  border: double 2px black;
 }
 
 .card-content {
