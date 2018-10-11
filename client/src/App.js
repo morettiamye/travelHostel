@@ -70,15 +70,24 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <NavBar isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/trip" component={MainForm} />
-          <Route exact path="/usertrips" component={TripCard} />
-          <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} />} />
-          <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} />} />
-
-          <Footer />
+          <div className="site">
+            <div className="site-content">
+              <NavBar isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
+              <div className="hero-body">
+                <div className="container has-text-centered">
+                <div className="box column is-three-fifths is-offset-one-fifth">
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/dashboard" component={Dashboard} />
+                  <Route exact path="/trip" component={MainForm} />
+                  <Route exact path="/usertrips" component={TripCard} />
+                  <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} />} />
+                  <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} />} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Footer />
+          </div>
         </div>
       </Router>
     );
@@ -86,15 +95,3 @@ class App extends Component {
 }
 
 export default App;
-
-    // import NavBar from "./component/NavBar";
-    // import Footer from "./component/Footer";
-    // import Duration from "./component/Form/Duration";
-    // import Season from "./component/Form/Season";
-    // import NoMatch from "./component/NoMatch/NoMatch";
-    // import SearchCity from "./component/SearchCity";
-    // import Favorite from "./component/Favorite";
-    // import Form from "./component/Form";
-    // import FormNote from "./component/FormNote";
-    // import PictureUploader from "./component/PictureUploader";
-    // import Trip from "./component/Trip";

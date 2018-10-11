@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = props => (
 
-    <div className="box">
+  
         <div className="field is-grouped">
             <p className="control is-expanded">
                 <form action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
@@ -15,7 +15,6 @@ const Search = props => (
                 </p>
             </p>
         </div>
-    </div>
 )
 
 export default Search;
