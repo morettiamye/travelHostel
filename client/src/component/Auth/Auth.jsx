@@ -21,6 +21,7 @@ class Auth extends React.Component {
         API.login(this.state)
           .then(res => {
             console.log(res.data);
+            localStorage.setItem("userID", res.data.userID)
             this.props.handleLogIn(res.data);
           })
           .catch(err => {

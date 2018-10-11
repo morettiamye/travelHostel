@@ -28,7 +28,8 @@ class App extends Component {
       isLoggedIn: true,
       user
     })
-    localStorage.setItem("username", user.username)
+    localStorage.setItem("username", user.username);
+
   };
 
   handleSignup = user => {

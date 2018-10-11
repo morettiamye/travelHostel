@@ -19,7 +19,7 @@ userController.signup = function (req, res) {
 // // Post login
 userController.login = function (req, res) {
   passport.authenticate('local')(req, res, function () {
-    res.json({ userID: req.user.id, username: req.user.username })
+    res.json({ userID: req.user.id, username: req.user.username, trips: req.user.trips, favtrips: req.user.favtrips })
   });
 };
 
