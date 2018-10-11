@@ -42,6 +42,10 @@
             "http://gd.geobytes.com/AutoCompleteCity?callback=?&q=" + request.term,
             function (data) {
               response(data);
+
+              document.querySelector('.ui-corner-all').addEventListener('click', (e) =>{
+            localStorage.setItem("selectedCity", e.target.innerText);
+        }, false)
             }
           );
         },

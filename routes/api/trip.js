@@ -14,7 +14,7 @@ router
   .delete(travelController.remove);
 
 router
-  .route("/trips/:city")
-  .get(travelController.findByCity)
+  .route("/lookup")
+  .post(travelController.findByCity) // made POST to take a body but really returns
 
 module.exports = router;
