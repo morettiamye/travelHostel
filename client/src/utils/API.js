@@ -11,7 +11,7 @@ export default {
     },
 
     getTripCity: function (city) {
-        return axios.get("api/trips/" + city);
+        return axios.post("api/trips/lookup", city);
     },
 
     // Deletes the trip with the given id
