@@ -10,7 +10,6 @@ class SearchCity extends Component {
 
     handleCitySearch = event => {
         event.preventDefault();
-
         API.getTripCity(this.props.match.params.city)
         console.log(this.props.match.params.city)
             .then(res => this.setState({ city: res.data }))
