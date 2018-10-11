@@ -24,14 +24,24 @@ export default class Main extends React.Component {
   };
 
   getPhotos = photos => {
-    console.log("This is getting done")
+    console.log("This is getting done");
     this.setState({ photos });
   };
 
   handleSubmitForm = e => {
-
     e.preventDefault();
     axios.post("/api/trips", this.state);
+    this.setState({
+      user: "",
+      city: "",
+      duration: "",
+      season: "",
+      food: "",
+      accomodations: "",
+      transportations: "",
+      activities: "",
+      photos: []
+    });
   };
 
   render() {
