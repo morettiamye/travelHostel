@@ -1,5 +1,6 @@
 import React from 'react';
 import API from "../../utils/API"
+import { Link } from "react-router-dom";
 
 class Auth extends React.Component {
     state = {
@@ -33,7 +34,6 @@ class Auth extends React.Component {
                     .then(res => {
                         console.log(res.data)
                         this.props.handleSignUp(res.data);
-
                     })
                     .catch(err => {
                         console.log(err)
@@ -44,7 +44,7 @@ class Auth extends React.Component {
 
         }
 
-
+        this.props.history.push('/dashboard');
 
     };
 
@@ -55,7 +55,9 @@ class Auth extends React.Component {
                 <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
                 <p>Password:</p>
                 <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} />
-                <button type="submit" onClick={this.handleFormSubmit}>Submit</button>
+                <button className="button is-link is-medium" onClick={this.handleFormSubmit}>
+                    Submit
+                </button>
             </form>
         );
     }
