@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const travelSchema = new Schema({
   user: { type: String },
+  title: { type: String },
   city: { type: String },
   duration: { type: String },
   season: { type: String },
