@@ -50,13 +50,23 @@ class Auth extends React.Component {
 
     render() {
         return (
-            <form>
-                <p>Username:</p>
-                <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
-                <p>Password:</p>
-                <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} />
-                <button type="submit" onClick={this.handleFormSubmit}>Submit</button>
-            </form>
+                <div className="column is-10 is-offset-1">
+                <div className="field is-grouped-centered has-text-left">
+                <label className="label">Username</label>
+                <div className="control">
+                <input type="text" name="username" className="input is-link" value={this.state.username} onChange={this.handleInputChange} />
+                </div>
+                <br/>
+                <label className="label">Password</label>
+                <div className="control">
+                <input type="password" name="password" className="input is-link" value={this.state.password} onChange={this.handleInputChange} />
+                </div>
+                <br/>
+                <div className="control">
+                <button className="button is-link" type="submit" onClick={this.handleFormSubmit}>Submit</button>
+                </div>
+                </div>
+            </div>
         );
     }
 }
