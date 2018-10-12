@@ -9,6 +9,7 @@ mongoose.connect(
 const tripSeed = [
     {
         user: "",
+        title: "A trip to Chicago",
         city: "Chicago, IL, United States",
         duration: "7",
         season: "",
@@ -21,6 +22,7 @@ const tripSeed = [
     },
     {
         user: "Joe",
+        title: "Waffles in Amsterdam",
         city: "Amsterdam, NH, Netherlands",
         duration: "5",
         season: "Summer",
@@ -33,6 +35,7 @@ const tripSeed = [
     },
     {
         user: "Charlie",
+        title: "All the seafood",
         city: "Amsterdam, NH, Netherlands",
         duration: "4",
         season: "Summer",
@@ -45,6 +48,7 @@ const tripSeed = [
     },
     {
         user: "Mike",
+        title: "5 days of pancakes",
         city: "Amsterdam, NH, Netherlands",
         duration: "5",
         season: "Summer",
@@ -57,6 +61,7 @@ const tripSeed = [
     },
     {
         user: "Dominic",
+        title: "My trip to China",
         city: "Beijing, BJ, China",
         duration: "5",
         season: "Winter",
@@ -69,6 +74,7 @@ const tripSeed = [
     },
     {
         user: "Chris",
+        title: "Winter in Beijing",
         city: "Beijing, BJ, China",
         duration: "9",
         season: "Winter",
@@ -81,6 +87,7 @@ const tripSeed = [
     },
     {
         user: "sbaig",
+        title: "Maine Lobster",
         city: "Portland, ME, United States",
         duration: "4",
         season: "Fall",
@@ -93,6 +100,7 @@ const tripSeed = [
     },
     {
         user: "joe",
+        title: "All the loster!",
         city: "Portland, ME, United States",
         duration: "4",
         season: "Fall",
@@ -105,6 +113,7 @@ const tripSeed = [
     },
     {
         user: "john",
+        title: "The Chicago Dog",
         city: "Chicago, IL, United States",
         duration: "7",
         season: "Fall",
@@ -117,6 +126,7 @@ const tripSeed = [
     },
     {
         user: "stacy",
+        title: "The worst pizza in the US",
         city: "Chicago, IL, United States",
         duration: "3",
         season: "Winter",

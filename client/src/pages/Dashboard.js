@@ -14,11 +14,8 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div className="buttonDiv">
-        {/* <Button name={addTrip} />
-        <Button name={favTrip} />
-        <Button name={myTrip} /> */}
-        {/* <div className="favTripDiv" {this.state.favTrip}/> */}
+      <div className="Dashboard">
+        
       </div>
     );
   }
