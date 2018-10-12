@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from 'react-router';
 import API from "../../utils/API";
 
 class Auth extends React.Component {
@@ -44,6 +45,9 @@ class Auth extends React.Component {
   };
 
   render() {
+    if (this.props.isLoggedIn) {
+      return <Redirect to="/dashboard" />
+    }
     return (
       <form>
         <p>Username:</p>
