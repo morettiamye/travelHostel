@@ -17,11 +17,12 @@ module.exports = {
   },
   findByCity: (req, res) => {
     db.Trip
-      .find({city:req.body.city})
+      .find({ city: req.body.city })
       .then(dbTrip => res.json(dbTrip))
       .catch(err => res.status(422).json(err));
   },
   create: (req, res) => {
+    console.log("this is req.body: " + req.body.user)
     db.Trip
       .create(req.body)
       .then(dbTrip => res.json(dbTrip))
