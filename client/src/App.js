@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import Home from "./pages/Home";
@@ -12,6 +12,7 @@ import Modal from "./component/Modal";
 import TripCard from "./component/TripCard";
 import Auth from "./component/Auth"
 import API from "./utils/API"
+// import ErrorPage from "./component/ErrorPage";
 
 
 class App extends Component {
@@ -84,6 +85,7 @@ class App extends Component {
                   <Route exact path="/usertrips" component={TripCard} />
                   <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} />} />
                   <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} />} />
+                  
                   </div>
                 </div>
               </div>
