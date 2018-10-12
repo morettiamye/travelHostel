@@ -46,7 +46,7 @@ class PictureUploader extends React.Component {
   render() {
     return (
       <div className='picuploader-container'>
-        <h6>Upload pictures of your trip here!</h6>
+        <label className="label">Pictures</label>
         <form>
           <input type='file' accept='image/*' multiple onChange={this.previewFiles} />
         </form>
