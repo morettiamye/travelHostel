@@ -10,6 +10,7 @@ export default class Main extends React.Component {
   state = {
     user: localStorage.getItem("userID"),
     city: "",
+    cityDump: "",
     duration: "",
     season: "",
     food: "",
@@ -23,26 +24,34 @@ export default class Main extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+
   getPhotos = photos => {
     console.log("This is getting done");
     this.setState({ photos });
   };
 
-  handleSubmitForm = e => {
+
+  handleSubmitForm = (e) => {
     e.preventDefault();
-    axios.post("/api/trips", this.state);
-    this.setState({
-      title: "",
-      city: "",
-      duration: "",
-      season: "",
-      food: "",
-      accomodations: "",
-      transportations: "",
-      activities: "",
-      photos: []
-    });
+    this.setState({ city: localStorage.getItem("selectedCity") },
+      () => {
+
+        console.log(this.state)
+        axios.post("/api/trips", this.state);
+        this.setState({
+          title: "",
+          cityDump: "",
+          duration: "",
+          season: "",
+          food: "",
+          accomodations: "",
+          transportations: "",
+          activities: "",
+          photos: []
+        });
+      })
     console.log(localStorage.getItem("userID"))
+
   };
 
   render() {
@@ -64,13 +73,16 @@ export default class Main extends React.Component {
           <br />
           <label className="label">City</label>
           <div className="control">
-            <input
-              className="input is-link"
-              type="text"
-              name="city"
-              value={this.state.city}
-              onChange={this.handleInputChange}
-            />
+            <div name="form_citydetails" id="form_citydetails" encType="multipart/form-data" >
+              <input
+                className="ff_elem input is-link"
+                type="text"
+                name="cityDump"
+                id="f_elem_city"
+                placeholder="Start typing city name"
+                onChange={this.handleInputChange}
+                value={this.cityDump} />
+            </div>
           </div>
           <br />
           <label className="label">Trip Duration (in days)</label>
@@ -81,6 +93,7 @@ export default class Main extends React.Component {
               name="duration"
               value={this.state.duration}
               onChange={this.handleInputChange}
+
             />
           </div>
           <br />
