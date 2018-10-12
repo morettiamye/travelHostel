@@ -9,6 +9,7 @@ import Footer from "./component/Footer";
 import MainForm from "./component/Form/Main";
 import Auth from "./component/Auth"
 import API from "./utils/API"
+// import ErrorPage from "./component/ErrorPage";
 
 
 class App extends Component {
@@ -81,6 +82,7 @@ class App extends Component {
                   <Route exact path="/usertrips" component={UserTrips} />
                   <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} />} />
                   <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} />} />
+                  
                   </div>
                 </div>
               </div>

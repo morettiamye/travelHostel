@@ -73,6 +73,7 @@ export default class Main extends React.Component {
           <br />
           <label className="label">City</label>
           <div className="control">
+
             <div name="form_citydetails" id="form_citydetails" encType="multipart/form-data" >
               <input
                 className="ff_elem input is-link"

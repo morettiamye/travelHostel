@@ -12,10 +12,10 @@ class UserTrips extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+
         <TripCard />
         <Modal />
-        <Footer />
+
       </div>
     );
   }
