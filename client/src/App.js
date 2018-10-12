@@ -75,14 +75,14 @@ class App extends Component {
               <NavBar isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
               <div className="hero-body">
                 <div className="container has-text-centered">
-                <div className="box column is-three-fifths is-offset-one-fifth">
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/dashboard" component={Dashboard} />
-                  <Route exact path="/trip" component={MainForm} />
-                  <Route exact path="/usertrips" component={UserTrips} />
-                  <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} />} />
-                  <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} />} />
-                  
+                  <div className="box column is-three-fifths is-offset-one-fifth">
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/trip" component={MainForm} />
+                    <Route exact path="/usertrips" component={UserTrips} />
+                    <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} isLoggedIn={this.state.isLoggedIn} />} />
+                    <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} isLoggedIn={this.state.isLoggedIn} />} />
+
                   </div>
                 </div>
               </div>
