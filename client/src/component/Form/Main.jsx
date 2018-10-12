@@ -1,9 +1,5 @@
 import React from "react";
 import axios from "axios";
-// import City from './City';
-// import Duration from './Duration';
-// import Season from './Season';
-// import FormNote from '../FormNote'
 import PictureUploader from "../PictureUploader";
 
 export default class Main extends React.Component {

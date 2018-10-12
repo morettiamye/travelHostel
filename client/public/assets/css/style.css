@@ -12,14 +12,17 @@ html {
     flex-direction: column;
   }
   
-  .site-content {
+.site-content {
     flex: 1;
   }
 
-  .box {
+.box {
     background-color: rgba(255, 255, 255, .9);
   }
 
+p {
+  font-family: 'Permanent Marker', cursive;
+}
   /* unvisited link */
 a:link {
   color: black;

@@ -41,3 +41,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/travelHostel");
 app.listen(PORT, () =>
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
 );
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, './index.html'));
+//   });

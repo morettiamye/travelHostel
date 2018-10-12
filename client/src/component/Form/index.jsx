@@ -1,3 +1,1 @@
-export * from "./City";
-export * from "./Duration";
-export * from "./Season";
+export { default } from "./Main";
