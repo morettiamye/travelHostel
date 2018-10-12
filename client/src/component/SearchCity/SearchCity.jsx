@@ -4,16 +4,16 @@ const Search = props => (
 
   
         <div className="field is-grouped">
-            <p className="control is-expanded">
-                <form action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
-                    <input class="ff_elem" type="text" name="ff_nm_from[]" value="" id="f_elem_city" placeholder="Start typing city name" onChange={props.handleInputChange}
+            <div className="control is-expanded">
+                <form name="form_citydetails" id="form_citydetails" encType="multipart/form-data" >
+                    <input className="ff_elem" type="text" name="ff_nm_from[]" value="" id="f_elem_city" placeholder="Start typing city name" onInput={props.handleInputChange}
                         value={props.city} />
                 </form>
 
                 <p className="control">
                     <a onClick={props.handleCitySearch} className="button is-link">Search</a>
                 </p>
-            </p>
+            </div>
         </div>
 )
 

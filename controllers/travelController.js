@@ -17,7 +17,7 @@ module.exports = {
   },
   findByCity: (req, res) => {
     db.Trip
-      .findById(req.params.city)
+      .find({city:req.body.city})
       .then(dbTrip => res.json(dbTrip))
       .catch(err => res.status(422).json(err));
   },

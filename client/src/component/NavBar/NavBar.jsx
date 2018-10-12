@@ -12,10 +12,14 @@ const NavBar = (props) => (
       <div className="navbar-end">
         <div className="navbar-item">
           <div className="buttons">
-            {props.isLoggedIn ?
+            {props.isLoggedIn ? <div>
               <button className="button is-link is-medium" onClick={props.handleLogOut}>
                 Log Out
-          </button> :
+          </button>
+              <Link to="/dashboard" className="button is-link is-medium">
+                Dashboard
+          </Link>
+            </div> :
               <div>
                 <Link to="/login" className="button is-link is-medium">
                   Log in
