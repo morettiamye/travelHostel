@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Favorite from "../Favorite";
-import "./Modal.css";
+import "./modal.css";
 
 const Modal = ({ children, closeModal, modalState, title }) => {
   if (!modalState) {
