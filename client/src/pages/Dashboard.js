@@ -14,9 +14,8 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-<<<<<<< HEAD
       <div className="column is-10 is-offset-1">
-        <p className="is-size-3">Hello, USERNAME !</p>
+        <p className="is-size-3">Hello, {localStorage.getItem("username")} !</p>
         <br />
         <br />
         <div className="columns">
@@ -29,9 +28,6 @@ class Dashboard extends React.Component {
         </div>
         
         <p className="is-size-5">Favorites</p>
-=======
-      <div className="Dashboard">
->>>>>>> master
         
       </div>
     );
