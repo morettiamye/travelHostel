@@ -5,6 +5,7 @@ const travelSchema = new Schema({
   user: { type: String },
   title: { type: String },
   city: { type: String },
+  cityDump: { type: String },
   duration: { type: String },
   season: { type: String },
   food: { type: String },

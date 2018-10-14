@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from 'react-router';
 import API from "../../utils/API";
 
 class Auth extends React.Component {
@@ -46,7 +47,13 @@ class Auth extends React.Component {
   
   
   render() {
+<<<<<<< HEAD
     const signUp = this.props.location.pathname === "/signup";
+=======
+    if (this.props.isLoggedIn) {
+      return <Redirect to="/dashboard" />
+    }
+>>>>>>> master
     return (
       <div>
       <h2>

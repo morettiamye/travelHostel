@@ -19,14 +19,14 @@ class Dashboard extends React.Component {
         <br />
         <br />
         <div className="columns">
-        <div className="column is-4 is-offset-1">
-          <a className="is-link button is-medium" href="/trip">Add Trip</a>
+          <div className="column is-4 is-offset-1">
+            <a className="is-link button is-medium" href="/trip">Add Trip</a>
           </div>
           <div className="column">
-          <a className="is-link button is-medium" href="/usertrips">My Trips</a>
+            <a className="is-link button is-medium" href="/usertrips">My Trips</a>
+          </div>
         </div>
-        </div>
-        
+
         <p className="is-size-5">Favorites</p>
         
       </div>
