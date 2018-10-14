@@ -1,8 +1,10 @@
 .container1 {
-  margin-top: 25px;
+  margin: 20px;
+
   height: 200px;
   width: 200px;
   border: black 2px solid;
+  float: left;
 }
 
 .polaroid {
