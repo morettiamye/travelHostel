@@ -5,7 +5,8 @@ import API from "../../utils/API";
 class Auth extends React.Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    header: ""
   };
 
   handleInputChange = event => {
@@ -32,23 +33,26 @@ class Auth extends React.Component {
       }
       case "/signup": {
         API.signup(this.state)
-          .then(res => {
-            console.log(res.data);
-            this.props.handleSignUp(res.data);
-          })
-          .catch(err => {
-            console.log(err);
-          });
+        .then(res => {
+          console.log(res.data);
+          this.props.handleSignUp(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+        });
         break;
       }
     }
   };
-
+  
+  
   render() {
-    if (this.props.isLoggedIn) {
-      return <Redirect to="/dashboard" />
-    }
+    const signUp = this.props.location.pathname === "/signup";
     return (
+      <div>
+      <h2>
+        { signUp ? "Sign Up" : "Log In" }
+      </h2>
       <form>
         <p>Username:</p>
         <input
@@ -68,6 +72,7 @@ class Auth extends React.Component {
           Submit
         </button>
       </form>
+      </div>
     );
   }
 }
