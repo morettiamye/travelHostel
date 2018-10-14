@@ -10,7 +10,7 @@ import MainForm from "./component/Form/Main";
 import Auth from "./component/Auth";
 import API from "./utils/API";
 import TripCard from "./component/TripCard";
-// import ErrorPage from "./component/ErrorPage";
+import ErrorPage from "./component/ErrorPage";
 
 class App extends Component {
   state = {
@@ -79,6 +79,7 @@ class App extends Component {
               <div className="hero-body">
                 <div className="container has-text-centered">
                   <div className="box column is-three-fifths is-offset-one-fifth">
+                    <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/dashboard" component={Dashboard} />
                     <Route exact path="/trip" component={MainForm} />
@@ -106,6 +107,8 @@ class App extends Component {
                       )}
                     />
                     <Route exact path="/bulletin" component={TripCard} />
+                    <Route component={ ErrorPage } />
+                    </Switch>
                   </div>
                 </div>
               </div>

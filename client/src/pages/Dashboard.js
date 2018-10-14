@@ -31,11 +31,7 @@ class Dashboard extends React.Component {
         </div>
 
         <p className="is-size-5">Favorites</p>
-<<<<<<< HEAD
         <TripCard />
-=======
-        
->>>>>>> master
       </div>
     );
   }
