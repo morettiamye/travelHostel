@@ -1,28 +1,48 @@
+.container1 {
+  margin: 20px;
+
+  height: 200px;
+  width: 200px;
+  border: black 2px solid;
+  float: left;
+}
+
 .polaroid {
   position: relative;
   width: 220px;
+  /* border: 2px black solid; */
 }
- 
-.polaroid img {
-  border: 10px solid #fff;
-  border-bottom: 45px solid #fff;
+
+.button {
+  margin-right: 35px;
+  margin-top: 5px;
+}
+
+img {
+  border: 5px solid #fff;
+  border-bottom: 52px solid #fff;
   -webkit-box-shadow: 3px 3px 3px 3px #777;
-     -moz-box-shadow: 3px 3px 3px 3px #777;
-          box-shadow: 3px 3px 3px 3px #777;
+  -moz-box-shadow: 3px 3px 3px 3px #777;
+  box-shadow: 3px 3px 3px 3px #777;
 }
- 
- 
- .polaroid p {
+
+/* span {
+  padding-top: 17px;
+} */
+/* p {
   position: absolute;
   text-align: center;
   bottom: 10px;
   left: 10px;
-}
+} */
 
-.favorite {
+.title {
+  margin-left: 90px;
+}
+*/ .favorite {
   position: absolute;
   right: 15px;
-  bottom: 50px;
+  bottom: 10px;
   color: darkgoldenrod;
 }
 
@@ -30,5 +50,5 @@
   color: darkred;
   transform: rotate(30deg);
   position: absolute;
-  top: 0px;
+  top: 15px;
 }
