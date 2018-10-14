@@ -1,33 +1,38 @@
-import React from "react";
+import React, { Component } from "react";
+import Favorite from "../Favorite";
+import "./modal.css";
 
-class Modal extends React.Component {
-  state = {};
-
-  render() {
-    return (
-      <div class="modal">
-        <div class="modal-background" />
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Trip Details</p>
-            <button class="delete" aria-label="close">
-              X
-            </button>
-          </header>
-          <section class="modal-card-body">
-            <p />
-            <p />
-            <p />
-            <p />
-          </section>
-          <footer class="modal-card-foot">
-            <button class="button is-success">Save changes</button>
-            <button class="button">Cancel</button>
-          </footer>
-        </div>
-      </div>
-    );
+const Modal = ({ children, closeModal, modalState, title }) => {
+  if (!modalState) {
+    return null;
   }
-}
+  //   Modal.propTypes = {
+  //     closeModal: React.PropTypes.func.isRequired,
+  //     modalState: React.PropTypes.bool.isRequired,
+  //     title: React.PropTypes.string
+  //   };
+
+  return (
+    <div className="modal is-active">
+      <div className="modal-background" onClick={closeModal} />
+      <div className="modal-card">
+        <header className="modal-card-head head">
+          <p className="modal-card-title">{title}</p>
+          <button className="delete" onClick={closeModal} />
+        </header>
+        <section className="modal-card-body details">
+          <div className="content">{children}</div>
+        </section>
+        <footer className="modal-card-foot foot">
+          <a className="button" onClick={closeModal}>
+            Close Trip Details
+          </a>
+
+          <Favorite />
+        </footer>
+      </div>
+    </div>
+  );
+};
 
 export default Modal;

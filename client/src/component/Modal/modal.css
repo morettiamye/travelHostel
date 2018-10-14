@@ -1,0 +1,14 @@
+.head,
+.foot {
+  background-color: rgba(219, 223, 224, 0.972);
+}
+
+/* .fav {
+  margin-left: 425px;
+} */
+
+.details {
+  padding-top: 5px;
+  background-color: rgb(253, 253, 253);
+  text-align: center;
+}
