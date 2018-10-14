@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
@@ -9,7 +9,7 @@ import Footer from "./component/Footer";
 import MainForm from "./component/Form/Main";
 import Auth from "./component/Auth"
 import API from "./utils/API"
-// import ErrorPage from "./component/ErrorPage";
+import ErrorPage from "./component/ErrorPage";
 
 
 class App extends Component {
@@ -68,7 +68,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+    <Router>
         <div className="App">
           <div className="site">
             <div className="site-content">
@@ -76,13 +76,15 @@ class App extends Component {
               <div className="hero-body">
                 <div className="container has-text-centered">
                   <div className="box column is-three-fifths is-offset-one-fifth">
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/dashboard" component={Dashboard} />
-                    <Route exact path="/trip" component={MainForm} />
-                    <Route exact path="/usertrips" component={UserTrips} />
-                    <Route exact path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} isLoggedIn={this.state.isLoggedIn} />} />
-                    <Route exact path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} isLoggedIn={this.state.isLoggedIn} />} />
-
+                    <Switch>
+                      <Route exact path="/" component={Home} />
+                      <Route path="/dashboard" component={Dashboard} />
+                      <Route path="/trip" component={MainForm} />
+                      <Route path="/usertrips" component={UserTrips} />
+                      <Route path="/login" render={(props) => <Auth {...props} handleLogIn={this.handleLogin} isLoggedIn={this.state.isLoggedIn} />} />
+                      <Route path="/signup" render={(props) => <Auth {...props} handleSignUp={this.handleSignup} isLoggedIn={this.state.isLoggedIn} />} />
+                      <Route component={ErrorPage} />
+                    </Switch>
                   </div>
                 </div>
               </div>

@@ -47,13 +47,7 @@ class Auth extends React.Component {
   
   
   render() {
-<<<<<<< HEAD
     const signUp = this.props.location.pathname === "/signup";
-=======
-    if (this.props.isLoggedIn) {
-      return <Redirect to="/dashboard" />
-    }
->>>>>>> master
     return (
       <div>
       <h2>
