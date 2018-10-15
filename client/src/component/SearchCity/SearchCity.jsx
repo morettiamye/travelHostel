@@ -12,7 +12,7 @@ const Search = props => (
             </div>
             <br />
 
-            <button onClick={props.handleCitySearch} className="button is-link is-large">Search</button>
+            <button onClick={props.handleReroute} className="button is-link is-large">Search</button>
         </div>
     </div >
 

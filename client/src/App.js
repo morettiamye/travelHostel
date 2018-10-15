@@ -11,6 +11,7 @@ import Auth from "./component/Auth";
 import API from "./utils/API";
 import TripCard from "./component/TripCard";
 import ErrorPage from "./component/ErrorPage";
+import Bulletin from "./pages/Bulletin";
 
 class App extends Component {
   state = {
@@ -84,6 +85,7 @@ class App extends Component {
                       <Route exact path="/dashboard" component={Dashboard} />
                       <Route exact path="/trip" component={MainForm} />
                       <Route exact path="/usertrips" component={UserTrips} />
+                      <Route exact path="/bulletin" component={Bulletin} />
                       <Route
                         exact
                         path="/login"

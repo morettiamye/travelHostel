@@ -1,6 +1,7 @@
 import React from "react";
 import SearchCity from "../component/SearchCity";
 
+
 class Home extends React.Component {
   render() {
     return (
@@ -12,11 +13,12 @@ class Home extends React.Component {
         
         <br/>
         <br/>
+
         <SearchCity />
       </div>
-      </div>
-    );
-  }
+    </div >
+  );
 }
+
 
 export default Home;

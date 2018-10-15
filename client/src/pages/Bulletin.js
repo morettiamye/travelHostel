@@ -1,9 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import TripCard from "../component/TripCard";
+import React, { Component } from "react";
+import TripCard from "../component/TripCard"
 
-const Bulletin = () => {
-  return <TripCard />;
-};
+class Bulletin extends Component {
+  state = {};
+
+  render() {
+    return (
+
+      <TripCard />
+    );
+  }
+}
 
 export default Bulletin;

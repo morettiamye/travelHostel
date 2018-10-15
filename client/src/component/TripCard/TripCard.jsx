@@ -14,8 +14,6 @@ class TripCard extends React.Component {
     API.getTripCity({ city: localStorage.getItem("selectedCity") }).then(
       res => {
         this.setState({ trips: res.data });
-
-        // console.log(res.data);
       }
     );
   }
