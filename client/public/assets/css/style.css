@@ -23,6 +23,11 @@ html {
 p {
   font-family: 'Permanent Marker', cursive;
 }
+
+label {
+  font-family: 'Permanent Marker', cursive;
+}
+
   /* unvisited link */
 a:link {
   color: black;
