@@ -69,6 +69,7 @@ export default class Main extends React.Component {
               value={this.state.title}
               onChange={this.handleInputChange}
             />
+            <p class="help">Maximum 30 characters</p>
           </div>
           <br />
           <label className="label">City</label>

@@ -1,6 +1,7 @@
 import React from "react";
-import { Redirect } from 'react-router';
+// import { Redirect } from 'react-router';
 import API from "../../utils/API";
+import "./auth.css";
 
 class Auth extends React.Component {
   state = {
@@ -49,29 +50,42 @@ class Auth extends React.Component {
   render() {
     const signUp = this.props.location.pathname === "/signup";
     return (
-      <div>
-      <h2>
+      <div className=" column is-half is-offset-one-quarter">
+      <h2 className="auth is-size-3">
         { signUp ? "Sign Up" : "Log In" }
       </h2>
-      <form>
-        <p>Username:</p>
-        <input
-          type="text"
-          name="username"
-          value={this.state.username}
-          onChange={this.handleInputChange}
-        />
-        <p>Password:</p>
-        <input
-          type="password"
-          name="password"
-          value={this.state.password}
-          onChange={this.handleInputChange}
-        />
-        <button type="submit" onClick={this.handleFormSubmit}>
-          Submit
-        </button>
-      </form>
+
+      <br/>
+      <br/>
+      <div className="field is-grouped-centered">
+          <label className="label">Username:</label>
+          <div className="control is-expanded">
+            <input
+              className="input is-link"
+              type="text"
+              name="username"
+              value={this.state.username}
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <br/>
+        <label className="label">Password:</label>
+          <div className="control is-expanded">
+          <input
+            className="input is-link"
+            type="password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleInputChange}
+          />
+          </div>
+          <br/>
+          <div className="control">
+          <a className="button is-link" type="submit" onClick={this.handleFormSubmit}>
+            Submit
+          </a>
+          </div>
+        </div>
       </div>
     );
   }
