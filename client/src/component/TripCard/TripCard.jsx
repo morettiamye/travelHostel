@@ -6,7 +6,7 @@ import API from "../../utils/API";
 
 class TripCard extends React.Component {
   state = {
-    activeModal: 0,
+    activeModal: -1,
     trips: []
   };
 
