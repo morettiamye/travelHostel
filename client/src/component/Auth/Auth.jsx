@@ -1,5 +1,5 @@
 import React from "react";
-// import { Redirect } from 'react-router';
+import { Redirect } from "react-router";
 import API from "../../utils/API";
 import "./auth.css";
 
@@ -24,7 +24,7 @@ class Auth extends React.Component {
         API.login(this.state)
           .then(res => {
             console.log(res.data);
-            localStorage.setItem("userID", res.data.userID)
+            localStorage.setItem("userID", res.data.userID);
             this.props.handleLogIn(res.data);
           })
           .catch(err => {
@@ -34,30 +34,30 @@ class Auth extends React.Component {
       }
       case "/signup": {
         API.signup(this.state)
-        .then(res => {
-          console.log(res.data);
-          this.props.handleSignUp(res.data);
-        })
-        .catch(err => {
-          console.log(err);
-        });
+          .then(res => {
+            console.log(res.data);
+            this.props.handleSignUp(res.data);
+          })
+          .catch(err => {
+            console.log(err);
+          });
         break;
       }
     }
   };
-  
-  
+
   render() {
     const signUp = this.props.location.pathname === "/signup";
+    if (this.props.isLoggedIn) {
+      return <Redirect to="/dashboard" />;
+    }
     return (
       <div className=" column is-half is-offset-one-quarter">
-      <h2 className="auth is-size-3">
-        { signUp ? "Sign Up" : "Log In" }
-      </h2>
+        <h2 className="auth is-size-3">{signUp ? "Sign Up" : "Log In"}</h2>
 
-      <br/>
-      <br/>
-      <div className="field is-grouped-centered">
+        <br />
+        <br />
+        <div className="field is-grouped-centered">
           <label className="label">Username:</label>
           <div className="control is-expanded">
             <input
@@ -68,22 +68,26 @@ class Auth extends React.Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <br/>
-        <label className="label">Password:</label>
+          <br />
+          <label className="label">Password:</label>
           <div className="control is-expanded">
-          <input
-            className="input is-link"
-            type="password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-          />
+            <input
+              className="input is-link"
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+            />
           </div>
-          <br/>
+          <br />
           <div className="control">
-          <a className="button is-link" type="submit" onClick={this.handleFormSubmit}>
-            Submit
-          </a>
+            <a
+              className="button is-link"
+              type="submit"
+              onClick={this.handleFormSubmit}
+            >
+              Submit
+            </a>
           </div>
         </div>
       </div>

@@ -80,34 +80,34 @@ class App extends Component {
                 <div className="container has-text-centered">
                   <div className="box column is-three-fifths is-offset-one-fifth">
                     <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/dashboard" component={Dashboard} />
-                    <Route exact path="/trip" component={MainForm} />
-                    <Route exact path="/usertrips" component={UserTrips} />
-                    <Route
-                      exact
-                      path="/login"
-                      render={props => (
-                        <Auth
-                          {...props}
-                          handleLogIn={this.handleLogin}
-                          isLoggedIn={this.state.isLoggedIn}
-                        />
-                      )}
-                    />
-                    <Route
-                      exact
-                      path="/signup"
-                      render={props => (
-                        <Auth
-                          {...props}
-                          handleSignUp={this.handleSignup}
-                          isLoggedIn={this.state.isLoggedIn}
-                        />
-                      )}
-                    />
-                    <Route exact path="/bulletin" component={TripCard} />
-                    <Route component={ ErrorPage } />
+                      <Route exact path="/" component={Home} />
+                      <Route exact path="/dashboard" component={Dashboard} />
+                      <Route exact path="/trip" component={MainForm} />
+                      <Route exact path="/usertrips" component={UserTrips} />
+                      <Route
+                        exact
+                        path="/login"
+                        render={props => (
+                          <Auth
+                            {...props}
+                            handleLogIn={this.handleLogin}
+                            isLoggedIn={this.state.isLoggedIn}
+                          />
+                        )}
+                      />
+                      <Route
+                        exact
+                        path="/signup"
+                        render={props => (
+                          <Auth
+                            {...props}
+                            handleSignUp={this.handleSignup}
+                            isLoggedIn={this.state.isLoggedIn}
+                          />
+                        )}
+                      />
+                      <Route exact path="/bulletin" component={TripCard} />
+                      <Route component={ErrorPage} />
                     </Switch>
                   </div>
                 </div>
