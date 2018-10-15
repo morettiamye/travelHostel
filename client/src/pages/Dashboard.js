@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
         <p className="is-size-3">Hello, {localStorage.getItem("username")} !</p>
         <br />
         <br />
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column is-4 is-offset-1">
             <a className="is-link button is-medium" href="/trip">
               Add Trip

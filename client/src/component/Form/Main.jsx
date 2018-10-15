@@ -56,8 +56,8 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <div className="column is-10 is-offset-1">
-        <p className="is-size-3 has-text-black">Submit a Trip</p>
+      <div className="column is-10 is-offset-1 is-mobile">
+        <p className="is-size-3 is-size-5-mobile has-text-black">Submit a Trip</p>
         <br />
         <div className="field is-grouped-centered has-text-left">
           <label className="label">Trip Title</label>
