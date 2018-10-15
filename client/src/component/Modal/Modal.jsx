@@ -2,6 +2,16 @@ import React, { Component } from "react";
 import Favorite from "../Favorite";
 import "./modal.css";
 
+const renderPhotos = trip => {
+  if (trip.photos.length) {
+    return trip.photos.map((photo, idx) => {
+      return <img key={idx} src={photo} alt="Trip" />;
+    });
+  } else {
+    return <img src={trip.photo} alt="Trip" />;
+  }
+};
+
 const Modal = ({ closeModal, modalState, trip }) => {
   if (!modalState) {
     return null;
@@ -38,7 +48,7 @@ const Modal = ({ closeModal, modalState, trip }) => {
             ${trip.activities}`}</p>
             <div>
               <p>Check out these awesome photos I took!</p>
-              <img src={trip.photos} alt="trip photos" />
+              {renderPhotos(trip)}
             </div>
           </div>
         </section>
