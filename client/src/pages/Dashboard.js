@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-     
+
       <div>
         <p className="is-size-3">Hello, {localStorage.getItem("username")} !</p>
         <br />
@@ -28,20 +28,21 @@ class Dashboard extends React.Component {
             <a className="is-link button is-medium" href="/usertrips">
               My Trips
             </a>
-            </div>
-            </div>
-            <div className="column">
-            <p className="is-size-5">Favorites</p>
-            <br/>
-            <div className="tile is-ancestor">
-            <div className="tile is-vertical is-parent">
-        <TripCard />
-        </div>
-        </div>
           </div>
         </div>
+        <div className="column">
+          <p className="is-size-5">Favorites</p>
+          <br />
+          <div className="column">
+   
+                <TripCard />
+          
+          </div>
+        </div>
+      </div>
 
-       
+
+
     );
   }
 }
