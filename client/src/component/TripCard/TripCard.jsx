@@ -6,7 +6,7 @@ import API from "../../utils/API";
 
 class TripCard extends React.Component {
   state = {
-    modalState: false,
+    activeModal: 0,
     trips: []
   };
 
@@ -20,11 +20,10 @@ class TripCard extends React.Component {
     );
   }
 
-  toggleModal = () => {
-    this.setState((prev, props) => {
-      const newState = !prev.modalState;
-
-      return { modalState: newState };
+  toggleModal = idx => {
+    this.setState({
+      modalState: !this.state.modalState,
+      activeModal: idx
     });
   };
 
@@ -34,48 +33,30 @@ class TripCard extends React.Component {
   };
 
   renderTrips = () => {
-    return this.state.trips.map(trip => {
+    return this.state.trips.map((trip, idx) => {
       return (
-       
-        <div className="tile is-child is-6">
+        <div key={idx} className="tile is-child is-6">
           <div className="polaroid">
             <figure className="image is-square">
               {this.renderPhoto(trip)}
-              </figure>
-              <div className="favorite">
+            </figure>
+            <div className="favorite">
               <Favorite trip={trip} />
-              </div>
+            </div>
             <i className="fas fa-thumbtack fa-2x" />
-                <p className="is-size-7 tripTitle" onClick={this.toggleModal}>
-                  {trip.title}
-                </p>
-          
-                </div>
+            <p
+              className="is-size-7 tripTitle"
+              onClick={() => this.toggleModal(idx)}
+            >
+              {trip.title}
+            </p>
+          </div>
           <Modal
             closeModal={this.toggleModal}
-            modalState={this.state.modalState}
-            title={trip.title}
-          >
-            <p>{`City Explored : 
-            ${trip.city}`}</p>
-            <p>{`Time Spent Exploring : 
-            ${trip.duration} days`}</p>
-            <p>{`Season Traveled : 
-            ${trip.season}`}</p>
-            <p>{`How we got to there : 
-            ${trip.transportations}`}</p>
-            <p>{`Our accomodations : 
-            ${trip.accomodations}`}</p>
-            <p>{`Some food spots I recommend from my trip : 
-            ${trip.food}`}</p>
-            <p>{`Some activities I highly suggest you try : 
-            ${trip.activities}`}</p>
-            <div>
-              <p>Check out these awesome photos I took!</p>
-              <img src={trip.photos} alt="trip photos" />
-            </div>
-          </Modal>
-          </div>
+            modalState={idx === this.state.activeModal}
+            trip={trip}
+          />
+        </div>
       );
     });
   };
