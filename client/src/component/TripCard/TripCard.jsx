@@ -36,19 +36,21 @@ class TripCard extends React.Component {
   renderTrips = () => {
     return this.state.trips.map(trip => {
       return (
-        <div className="container1">
-          <div className="polariod">
+       
+        <div className="tile is-child is-6">
+          <div className="polaroid">
             <figure className="image is-square">
               {this.renderPhoto(trip)}
+              </figure>
               <div className="favorite">
-                <a className="button is-primary" onClick={this.toggleModal}>
-                  {trip.title}
-                </a>
-              </div>
               <Favorite trip={trip} />
-            </figure>
+              </div>
             <i className="fas fa-thumbtack fa-2x" />
-          </div>
+                <p className="is-size-7 tripTitle" onClick={this.toggleModal}>
+                  {trip.title}
+                </p>
+          
+                </div>
           <Modal
             closeModal={this.toggleModal}
             modalState={this.state.modalState}
@@ -73,7 +75,7 @@ class TripCard extends React.Component {
               <img src={trip.photos} alt="trip photos" />
             </div>
           </Modal>
-        </div>
+          </div>
       );
     });
   };

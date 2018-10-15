@@ -6,9 +6,8 @@ class UserTrips extends Component {
 
   render() {
     return (
-      <div>
+        
         <TripCard />
-      </div>
     );
   }
 }

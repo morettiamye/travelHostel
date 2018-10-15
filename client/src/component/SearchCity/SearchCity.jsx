@@ -10,6 +10,8 @@ const Search = props => (
                     value={props.city} />
             </div>
         </p>
+        <br/>
+        
             <a onClick={props.handleCitySearch} className="button is-link is-large">Search</a>
     </div>
     </div>
