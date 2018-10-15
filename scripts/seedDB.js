@@ -17,7 +17,7 @@ const tripSeed = [
         accomodations: "Hotel",
         transportations: "",
         activities: "",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/chicago1.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -30,7 +30,7 @@ const tripSeed = [
         accomodations: "Hostel",
         transportations: "NS",
         activities: "=]",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/Amsterdam1.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -43,7 +43,7 @@ const tripSeed = [
         accomodations: "Hotel",
         transportations: "NS",
         activities: "=]",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/amsterdam2.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -56,7 +56,7 @@ const tripSeed = [
         accomodations: "Hostel",
         transportations: "NS",
         activities: "=]",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/amsterdam3.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -69,7 +69,7 @@ const tripSeed = [
         accomodations: "Hotel",
         transportations: "East China Air",
         activities: "Business Trip",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/beijin.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -82,7 +82,7 @@ const tripSeed = [
         accomodations: "Ait Bnb",
         transportations: "Emerites",
         activities: "Business Trip",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/beijing2.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -95,7 +95,7 @@ const tripSeed = [
         accomodations: "Air Bnb",
         transportations: "Driving my Nissan Murano!",
         activities: "Lol it's Portland, Maine, not Portland, Oregon! But it's so pretty here in the fall! And the lobster is delicious!",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/portland.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -108,7 +108,7 @@ const tripSeed = [
         accomodations: "Air Bnb",
         transportations: "Drive",
         activities: "Aint nothin' prettier than driving through the Appalachias in the fall.",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/portland2.jpeg",
         date: new Date(Date.now())
     },
     {
@@ -121,7 +121,7 @@ const tripSeed = [
         accomodations: "Hotel",
         transportations: "The el",
         activities: "This is my f*** city!!!",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/tower2",
         date: new Date(Date.now())
     },
     {
@@ -134,7 +134,7 @@ const tripSeed = [
         accomodations: "Air bnb",
         transportations: "Uber",
         activities: "It either snowed, rained, or was too cold to do anything. I just wanted to stay instide the whole time!",
-        photo: "https://bulma.io/images/placeholders/128x128.png",
+        photo: "./assets/urban-chicago-spotlight.jpeg",
         date: new Date(Date.now())
     },
 ];
