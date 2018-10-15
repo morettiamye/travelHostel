@@ -8,7 +8,6 @@ class SearchCityContainer extends Component {
         city: ""
     };
 
-
     handleCitySearch = event => {
         event.preventDefault();
         // Since we've set the selectedCity in localStorage after selecting the city in autocomplete
