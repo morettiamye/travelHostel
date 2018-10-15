@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Search from "./SearchCity";
-import API from "../../utils/API";
-import { Redirect } from "react-router";
+import { withRouter } from "react-router-dom";
 
 class SearchCityContainer extends Component {
     // Setting the initial state of the Counter component
@@ -10,17 +9,9 @@ class SearchCityContainer extends Component {
         trips: []
     };
 
-    handleCitySearch = event => {
-        event.preventDefault();
-        // Since we've set the selectedCity in localStorage after selecting the city in autocomplete
-        // Look into localStorage, and check if we have one and update the city state with it
+    handleReroute = () => {
         if (localStorage.getItem("selectedCity")) {
-            API.getTripCity({ city: localStorage.getItem("selectedCity") })
-                .then(res => {
-                    console.log(res.data)
-                    this.setState({ trips: res.data })
-                })
-                .catch(err => console.log(err));
+            this.props.history.push("/bulletin")
         }
 
     };
@@ -35,15 +26,13 @@ class SearchCityContainer extends Component {
     };
 
     render() {
-        if (this.props.isLoggedIn || !this.props.isLoggedIn) {
-            return <Redirect to="/bulletin" />;
-        }
+
         return (
             <div>
-                <Search handleInputChange={this.handleInputChange} handleCitySearch={this.handleCitySearch} />
+                <Search handleInputChange={this.handleInputChange} handleReroute={this.handleReroute} />
             </div>
 
         )
     }
 }
-export default SearchCityContainer; 
+export default withRouter(SearchCityContainer); 
