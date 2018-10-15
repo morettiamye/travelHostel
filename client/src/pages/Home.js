@@ -12,7 +12,6 @@ class Home extends React.Component {
         
         <br/>
         <br/>
-        <h1>Start typing a city..</h1>
         <SearchCity />
       </div>
       </div>
