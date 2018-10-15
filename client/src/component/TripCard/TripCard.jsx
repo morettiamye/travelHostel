@@ -35,7 +35,7 @@ class TripCard extends React.Component {
   renderTrips = () => {
     return this.state.trips.map((trip, idx) => {
       return (
-        <div key={idx} className="tile is-child is-6">
+        <div key={idx}>
           <div className="polaroid">
             <figure className="image is-square">
               {this.renderPhoto(trip)}

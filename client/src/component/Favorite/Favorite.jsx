@@ -2,7 +2,7 @@ import React from "react";
 
 class Favorite extends React.Component {
     state = {
-        className: 'fas fa-star'
+        className: 'far fa-star'
     }
 
     toggleClass = () => {

@@ -5,7 +5,7 @@ import "./navbar.css";
 const NavBar = (props) => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="navbar-brand ">
-      <h1 className="has-text-black is-uppercase is-size-1"><a href="/">Virtual Hostel</a></h1>
+      <h1 className="has-text-black is-uppercase is-size-1 is-size-5-mobile"><a href="/">Virtual Hostel</a></h1>
     </div>
 
     <div id="navbarBasicExample" className="navbar-menu">
