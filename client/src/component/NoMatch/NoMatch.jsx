@@ -12,7 +12,7 @@ const NoMatch = () => {
             <footer className="card-footer">
                 <p className="card-footer-item">
                     <span>
-                        <a href="#">Add a Trip</a>
+                        <a href="/trip">Add a Trip</a>
                     </span>
                 </p>
             </footer>
